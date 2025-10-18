@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 19:17:46 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/13 19:19:11 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/18 17:01:48 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	if (n == 0)
 		return (0);
 	i = 0;
-	while (s1[i] == s2[i] && i < (int)n - 1)
+	while ((s1[i] == s2[i] && i < (int)n - 1) && (s1[i] != '\0' || s2[i] != '\0'))
 		i++;
-	return ((int)(s1[i] - s2[i]));
+	return ((unsigned char)(s1[i] - s2[i]));
 }

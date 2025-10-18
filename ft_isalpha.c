@@ -6,11 +6,11 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 15:25:45 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/14 11:39:35 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/17 10:40:31 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{

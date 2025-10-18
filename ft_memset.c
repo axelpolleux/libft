@@ -6,13 +6,14 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:03:11 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/14 17:39:41 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/15 14:19:17 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memset(void *s, int c, size_t n)
+#include <stddef.h>
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned int long	size_t ;
 	unsigned char		*str;
 	size_t				i;
 

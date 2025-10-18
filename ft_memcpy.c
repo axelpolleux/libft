@@ -6,24 +6,25 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:18:18 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/15 08:37:23 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/17 09:09:26 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memcpy(void *dest, const void *src, size_t n)
+#include <stddef.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned const char	*str1;
+	const unsigned char	*str1;
 	unsigned char		*str2;
-	int	i;
+	size_t				i;
 
 	str1 = src;
 	str2 = dest;
-    i = 0;
-
-	while(i < n)
+	i = 0;
+	while (i < n)
 	{
 		str2[i] = str1[i];
 		i++;
 	}
-	return(dest);
+	return (str2);
 }

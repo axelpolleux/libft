@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 13:14:32 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/17 15:54:27 by apolleux         ###   ########.fr       */
+/*   Created: 2025/10/18 16:10:39 by apolleux          #+#    #+#             */
+/*   Updated: 2025/10/18 16:31:24 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stddef.h>
+#include <stdlib.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strdup(const char *s)
 {
-	size_t	i;
-	size_t	dlen;
-	size_t	slen;
-	size_t	tofill;
+	int		i;
+	int		j;
+	char	*newstr;
 
 	i = 0;
-	dlen = ft_strlen(dst);
-	slen = ft_strlen(src);
-	if (dlen >= size)
-		return (size + slen);
-	tofill = size - dlen - 1;
-	while (src[i] && tofill--)
-	{
-		dst[dlen + i] = src[i];
+	j = 0;
+	while (s[i] != '\0')
 		i++;
+	newstr = malloc((i + 1) * (sizeof(char)));
+	if (!newstr)
+		return (NULL);
+	while (s[j])
+	{
+		newstr[j] = s[j];
+		j++;
 	}
-	dst[dlen + i] = '\0';
-	return (dlen + slen);
+	newstr[j] = '\0';
+	return (newstr);
 }
