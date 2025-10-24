@@ -6,13 +6,23 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 15:52:20 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/18 16:07:56 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:20:19 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	return(0);
+	size_t	i;
+
+	i = 0;
+	while (n--)
+	{
+		if (((char *)s)[i] == (char)c)
+			return ((char *)s + i);
+		i++;
+	}
+	return (0);
 }

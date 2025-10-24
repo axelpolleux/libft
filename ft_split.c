@@ -1,35 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 16:10:39 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/21 17:08:01 by apolleux         ###   ########.fr       */
+/*   Created: 2025/10/21 18:54:02 by apolleux          #+#    #+#             */
+/*   Updated: 2025/10/24 09:21:08 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(const char *s)
+int	count_word(char *str, char c)
 {
-	int		i;
-	int		j;
-	char	*newstr;
+	int	count;
+	int	x;
 
-	i = 0;
-	j = 0;
-	while (s[i] != '\0')
-		i++;
-	newstr = malloc((i + 1) * (sizeof(char)));
-	if (!newstr)
-		return (NULL);
-	while (s[j])
+	count = 0;
+	x = 0;
+	while (*str)
 	{
-		newstr[j] = s[j];
-		j++;
+		if ((*str != c) && (x == 0))
+		{
+			x = 1;
+			count++;
+		}
+		else if (*str == c)
+			x = 0;
+		str++;
 	}
-	newstr[j] = '\0';
-	return (newstr);
+	return (count);
 }
+
+char	**ft_split(char const *s, char c)
+{
+	return (0);
+}
+
+// #include <stdio.h>
+// int main(int argc, char *argv[]){
+// 	printf("%d\n", count_word(argv[1], argv[2][0]));
+// }
