@@ -6,11 +6,12 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 16:10:42 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/21 17:35:22 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/25 13:58:27 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
 
