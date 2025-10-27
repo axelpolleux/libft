@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:54:02 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/25 13:02:25 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/27 17:53:26 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,48 +34,52 @@ int	count_word(char *str, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static void	*ft_free(char **tab)
 {
-	char	**res;
-	int		word;
-	int		tab_i;
-	int		len;
+	int	i;
 
-	// s = ft_strtrim(s, &c);
-	word = count_word((char *)s, c);
-	tab_i = 0;
-	len = 0;
-	res = ft_calloc(word + 1, sizeof(char *));
-	if (!res)
-		return (0);
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+	return (0);
+}
+
+static char	**fill_split(char const *s, char c, char **res)
+{
+	int	i;
+	int	len;
+
+	i = 0;
 	while (*s)
 	{
+		while (*s == c)
+			s++;
 		len = 0;
 		while (s[len] && s[len] != c)
 			len++;
-		if (s[len] == c || s[len] == '\0')
+		if (len)
 		{
-			res[tab_i] = ft_substr(s, 0, len);
-			tab_i++;
+			res[i] = ft_substr(s, 0, len);
+			if (!res[i++])
+				return (ft_free(res));
+			s += len;
 		}
-		while(s[len] && s[len] == c)
-			len++;
-		s += len;
 	}
 	return (res);
 }
 
-// #include <stdio.h>
-// int main(){
-// 	char **p;
-// 	int i;
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
 
-// 	i = 0;
-// 	p = ft_split("__Hello_World_SASA__", '_');
-// 	while (p[i])
-// 	{
-// 		printf("%s", p[i]);
-// 		i++;
-// 	}
-// 	return (0);
-// }
+	if (!s)
+		return (NULL);
+	res = ft_calloc(count_word((char *)s, c) + 1, sizeof(char *));
+	if (!res)
+		return (NULL);
+	return (fill_split(s, c, res));
+}

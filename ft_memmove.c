@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 09:04:03 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/22 14:52:36 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/27 17:35:33 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	str1 = src;
 	str2 = dest;
+	if (!dest && !src)
+		return (0);
 	if (src < dest)
 	{
 		i = n - 1;

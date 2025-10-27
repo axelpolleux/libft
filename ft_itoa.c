@@ -6,14 +6,14 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:54:08 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/24 15:44:48 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/27 10:55:52 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	calc_len(long n)
+static int	calc_len(long n)
 {
 	int	tlen;
 

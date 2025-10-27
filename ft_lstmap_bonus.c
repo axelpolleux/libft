@@ -6,17 +6,18 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 17:23:44 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/25 18:05:15 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/27 09:08:10 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
 	t_list	*new_obj;
 
-	if(!lst || !f || !del)
+	if (!lst || !f || !del)
 		return (0);
 	new_list = 0;
 	while (lst)
@@ -28,7 +29,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			return (0);
 		}
 		ft_lstadd_back(&new_list, new_obj);
-		lst=lst->next;
+		lst = lst->next;
 	}
 	return (new_list);
 }

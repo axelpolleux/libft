@@ -6,7 +6,7 @@
 #    By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 14:12:20 by apolleux          #+#    #+#              #
-#    Updated: 2025/10/25 18:05:36 by apolleux         ###   ########.fr        #
+#    Updated: 2025/10/27 11:19:28 by apolleux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,8 +48,9 @@ FILES = ft_isalpha.c \
 	ft_strmapi.c \
 	ft_striteri.c \
     ft_split.c \
-	ft_itoa.c \
-	ft_lstnew_bonus.c \
+	ft_itoa.c
+
+BONUSES = ft_lstnew_bonus.c \
 	ft_lstadd_front_bonus.c \
 	ft_lstsize_bonus.c \
 	ft_lstlast_bonus.c \
@@ -60,6 +61,7 @@ FILES = ft_isalpha.c \
 	ft_lstmap_bonus.c
 
 OBJECTS = ${FILES:.c=.o}
+BONUS_OBJECTS = ${BONUSES:.c=.o}
 
 all: ${NAME}
 
@@ -69,8 +71,10 @@ ${NAME}: ${OBJECTS}
 %.o: %.c
 	${CC} ${CFLAGS} $< -c -o $@
 
+bonus: ${NAME} ${OBJECTS} ${BONUS_OBJECTS}
+	ar rcs ${NAME} ${OBJECTS} ${BONUS_OBJECTS}
 clean:
-	rm -f ${OBJECTS}
+	rm -f ${OBJECTS} ${BONUS_OBJECTS}
 
 fclean: clean
 	rm -f ${NAME}
