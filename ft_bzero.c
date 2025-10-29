@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:42:13 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/28 14:19:58 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:49:43 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char		*str;
-	size_t				i;
+	char		*str;
+	size_t		i;
 
 	str = s;
 	i = 0;

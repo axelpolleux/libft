@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 17:19:10 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/29 11:27:11 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:27:53 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 
+	if (!lst || !del)
+		return ;
 	while (*lst)
 	{
 		tmp = (*lst)->next;

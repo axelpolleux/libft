@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 16:46:50 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/27 11:42:23 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:22:38 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ int	ft_lstsize(t_list *lst)
 {
 	int	i;
 
-	if (!lst)
-		return (0);
-	i = 1;
-	while (lst->next)
+	i = 0;
+	while (lst)
 	{
 		lst = lst->next;
 		i++;

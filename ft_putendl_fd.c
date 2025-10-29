@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:54:46 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/29 17:02:20 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:19:15 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_putendl_fd(char *s, int fd)
 	if (s)
 	{
 		write(fd, s, ft_strlen(s));
-		write(fd, &"\n", 1);
+		write(fd, "\n", 1);
 	}
-	return ;
 }

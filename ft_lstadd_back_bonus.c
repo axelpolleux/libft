@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 17:10:46 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/27 11:12:35 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:25:50 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	if (!lst && !new)
+	if (!lst || !new)
 		return ;
 	if (*lst == NULL)
 	{

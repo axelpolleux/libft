@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:18:18 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/27 17:35:37 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:55:02 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		str2[i] = str1[i];
 		i++;
 	}
-	return (str2);
+	return ((void *)str2);
 }
