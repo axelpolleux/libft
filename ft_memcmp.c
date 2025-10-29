@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 16:08:10 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/21 16:37:57 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:49:49 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
 
-	if (!n)
+	if (!n || (!s1 && !s2))
 		return (0);
 	i = 0;
 	n--;

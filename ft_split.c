@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:54:02 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/28 14:25:36 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:58:22 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,10 @@ static char	**fill_split(char const *s, char c, char **res)
 		{
 			res[i] = ft_substr(s, 0, len);
 			if (!res[i++])
-				return (ft_free(res));
+			{
+				ft_free(res);
+				return (0);
+			}
 			s += len;
 		}
 	}
@@ -74,11 +77,13 @@ static char	**fill_split(char const *s, char c, char **res)
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
+	char	**final_res;
 
 	if (!s)
 		return (NULL);
 	res = ft_calloc(count_word((char *)s, c) + 1, sizeof(char *));
 	if (!res)
 		return (NULL);
-	return (fill_split(s, c, res));
+	final_res = fill_split(s, c, res);
+	return (final_res);
 }
