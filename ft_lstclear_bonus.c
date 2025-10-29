@@ -6,12 +6,11 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 17:19:10 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/25 17:28:44 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 11:27:11 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {

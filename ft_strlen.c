@@ -6,11 +6,11 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:23:41 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/23 17:26:29 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:28:33 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

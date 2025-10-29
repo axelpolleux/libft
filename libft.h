@@ -6,13 +6,15 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:23:24 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/25 17:27:54 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:24:04 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 // ___________________
 // IIIIIIIIIIIIIIIIIII

@@ -6,11 +6,11 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 12:43:55 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/17 11:28:08 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:28:21 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

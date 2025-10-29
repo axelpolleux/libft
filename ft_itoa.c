@@ -6,12 +6,11 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:54:08 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/27 10:55:52 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 10:18:57 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	calc_len(long n)
 {
@@ -39,10 +38,9 @@ char	*ft_itoa(int n)
 	unsigned int	len;
 	long			nbr;
 
-	len = calc_len(n);
 	nbr = (long int)n;
 	len = calc_len(nbr);
-	res = malloc((len + 1) * sizeof(char));
+	res = (char *)malloc((len + 1) * sizeof(char));
 	if (!res)
 		return (0);
 	res[len--] = '\0';

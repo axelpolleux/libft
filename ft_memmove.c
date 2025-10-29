@@ -6,12 +6,11 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 09:04:03 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/27 17:35:33 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:23:42 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

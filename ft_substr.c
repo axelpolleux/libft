@@ -6,12 +6,10 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:53:30 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/22 17:34:13 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 10:19:59 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -27,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len > (s_len - start))
 		len = s_len - start;
 	len++;
-	res = malloc(sizeof(char) * len);
+	res = (char *)malloc(sizeof(char) * len);
 	if (!res)
 		return (0);
 	ft_strlcpy(res, s + start, len);

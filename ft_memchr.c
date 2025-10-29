@@ -6,11 +6,10 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 15:52:20 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/21 11:20:19 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:23:22 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)

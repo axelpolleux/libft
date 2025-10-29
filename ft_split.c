@@ -6,14 +6,13 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:54:02 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/27 17:53:26 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:25:36 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-int	count_word(char *str, char c)
+static int	count_word(char *str, char c)
 {
 	int	count;
 	int	x;
