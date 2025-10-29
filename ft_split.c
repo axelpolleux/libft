@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:54:02 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/29 16:58:22 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:09:32 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,7 @@ char	**ft_split(char const *s, char c)
 	if (!res)
 		return (NULL);
 	final_res = fill_split(s, c, res);
+	if (!final_res)
+		return (0);
 	return (final_res);
 }

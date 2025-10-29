@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:53:30 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/29 16:59:53 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:15:31 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= s_len)
 	{
 		res = (char *)ft_calloc(1, sizeof(char));
+		if (!res)
+			return (0);
 		return (res);
 	}
 	if (len > (s_len - start))
