@@ -6,7 +6,7 @@
 #    By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 14:12:20 by apolleux          #+#    #+#              #
-#    Updated: 2025/10/30 10:11:59 by apolleux         ###   ########.fr        #
+#    Updated: 2026/03/25 20:31:31 by apolleux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,19 +66,19 @@ BONUS_OBJECTS = ${BONUSES:.c=.o}
 all: ${NAME}
 
 ${NAME}: ${OBJECTS}
-	ar rcs ${NAME} ${OBJECTS}
+	@ar rcs ${NAME} ${OBJECTS}
 
 
 %.o: %.c
-	${CC} ${CFLAGS} $< -c -o $@
+	@${CC} ${CFLAGS} $< -c -o $@
 
 bonus: ${NAME} ${OBJECTS} ${BONUS_OBJECTS}
-	ar rcs ${NAME} ${OBJECTS} ${BONUS_OBJECTS}
+	@ar rcs ${NAME} ${OBJECTS} ${BONUS_OBJECTS}
 clean:
-	rm -f ${OBJECTS} ${BONUS_OBJECTS}
+	@rm -f ${OBJECTS} ${BONUS_OBJECTS}
 
 fclean: clean
-	rm -f ${NAME}
+	@rm -f ${NAME}
 
 re: fclean all
 
